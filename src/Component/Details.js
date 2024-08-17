@@ -45,7 +45,7 @@ export default function Details() {
     const bookLanguages = languages.join(', ');
 
     return (
-        <section>
+        <section className='m-container'>
          <div className="container mt-5">
             <div className='row'>
                 <div className='col-md-12'>
@@ -57,8 +57,8 @@ export default function Details() {
                     <p className='p-tag'><strong>Subjects:</strong> {bookSubjects}</p>
 
                 </div>
-                <div className='col-md-12'>
-                <img src={formats['image/jpeg']} alt={title} />
+                <div className='col-md-12 text-center'>
+                <img src={formats['image/jpeg']} className='book-img mt-5 mb-5' alt={title} />
                 </div>
             </div>
            
