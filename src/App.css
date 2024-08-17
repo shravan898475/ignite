@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Montserrat SemiBold';
+  src: url('./assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
+.bg-img
+{
+  background-image: url('./assets/images/Pattern.svg');
+  background-size: cover; /* Ensures the image covers the entire container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+}
+
+.h1-tag
+{
+  font-size: 48px;
+  font-family: Montserrat SemiBold;
+  color: #5E56E7;
+}
+
+.h2-tag
+{
+  font-size: 30px;
+  font-family: Montserrat SemiBold;
+  color: #5E56E7;
+}
+
+.h1-tag{
+  font-family: Montserrat SemiBold;
+}
+
+.p-tag
+{
+  font-family:Montserrat ;
+  color: #333333;
+}
+.pd-25
+{
+  padding: 25px;
+}
+.m-container
+{
+  background-color: #F0F0F6;
+}
+.w-bg
+{
+  background-color: #F8F7FF;
+}
+.pd-r-10
+{
+  padding-right: 10px;
+}
+.icon-h
+{
+  height: 30px;
+}
+.icon-next
+{
+  height: 20px;
+}
+.back-icon-h
+{
+  height: 20px;
+}
+.title-box
+{
+  border-radius: 5px;
+}
+.vh-80
+{
+  height: 80vh;
+}
+
+/* for search bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #f5f5f5;
+}
+
+.search-icon {
+  color: #888;
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.search-input {
+  border: none;
+  flex-grow: 1;
+  padding: 5px;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+}
+
+.close-icon {
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.search-container i {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.search-container .close-icon {
+  pointer-events: auto;
+}
+
+/* products page  */
+
+.book-img
+{
+  height: 200px;
+}
+.card-height
+{
+  height: 300px !important;
+}
+
+.Book-name
+{
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333333;
+}
+.Book-Author
+{
+  font-family: Montserrat;
+  font-size: 12px;
+  color: #A0A0A0;
+}
+
+/* Ensure three columns in a row on screens smaller than 768px */
+@media (max-width: 767.98px) {
+  .col-4 {
+    max-width: 33.333%;
+    flex: 0 0 33.333%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Card image adjustments */
+.card-img-top {
+  width: 100%;
+  height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.Rectangle {
+  width: 114px;
+  height: 162px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+ }
+
+ /* Default styles */
+.card-title {
+  font-size: 1.25rem; /* Adjust as needed */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.card-text {
+  font-size: 1rem; /* Adjust as needed */
+}
+
+/* Mobile view styles */
+@media (max-width: 600px) {
+  .card-title {
+    font-size: 12px; /* Adjust the font size for mobile view */
+    margin: 5px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .card-text {
+    font-size: 10px; /* Adjust the font size for mobile view */
+    margin: 5px;
   }
 }
+
+/* for loader */
+
+/* Add this CSS to your styles */
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
