@@ -171,6 +171,11 @@
 
 .card-text {
   font-size: 1rem; /* Adjust as needed */
+  font-family: Montserrat;
+}
+.list-book
+{
+  height: 200px;
 }
 
 /* Mobile view styles */
@@ -181,9 +186,17 @@
   }
 
   .card-text {
-    font-size: 10px; /* Adjust the font size for mobile view */
+    font-size: 8px; /* Adjust the font size for mobile view */
     margin: 5px;
+    font-family: Montserrat;
   }
+  .list-book
+{
+  height: 125px;
+}
+.card-height {
+  height: 235px !important;
+}
 }
 
 /* for loader */

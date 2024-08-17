@@ -103,7 +103,7 @@ export default function Products() {
                                 <div className="col-4 col-lg-3 mb-4" key={index}>
                                     <Link to={`/book/${product.id}`} className="text-decoration-none">
                                         <div className="card text-center card-height">
-                                            <img src={imageUrl} height={'200px'} alt={product.title} />
+                                            <img src={imageUrl} className="list-book" alt={product.title} />
                                             <div className="card-body">
                                                 <h5 className="card-title">{truncateText(product.title, 20)}</h5>
                                                 <p className="card-text">{authorName}</p>
@@ -120,7 +120,7 @@ export default function Products() {
                     )}
                 </div>
 
-                <div className="pagination mt-3 d-flex justify-content-center">
+                <div className="pagination mt-3 d-flex justify-content-center" style={{paddingBottom:'15px'}}>
                     <button
                         className="btn btn-primary"
                         onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
